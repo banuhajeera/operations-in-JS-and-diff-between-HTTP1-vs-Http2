@@ -1,0 +1,46 @@
+// C-1 create an object 
+let student = {
+    name: 'hajeera',
+    age: '24',
+ }
+
+let person={}
+ person.firstname="hajeerabanu";
+ person.age="26";
+
+ const temp= person;
+ temp.age="28";
+
+ // console.log(temp);
+
+ // c-2 Accessing objects 
+ console.log( "PERSON", person);
+ console.log(person.firstname);
+ console.log(person["firstname"]);
+ let prop = 'firstname';
+ console.log(person[prop])
+
+ // c-3 Loops in objects
+ console.log('c-3 loops in objects')
+ for(let prop in person){
+    console.log(prop);// first name
+    console.log(person[prop]);//john
+ }
+ //C-4 adding new props in object 
+ console.log('c-4 adding new props')
+ person.lastname= "irfan";
+ console.log(person)
+
+ // c-5 delete a prop
+ console.log('c-5 delete a prop in object  ');
+ delete person.lastname;
+ console.log(person)
+ 
+ // c-6 convert object in to string 
+ console.log ('c-6 object in to string' );
+ let store= JSON.stringify(person);
+ console.log(store);
+
+// c-7 convert string in to object 
+console.log ('c-7 string in to object' );
+console.log(JSON.parse( JSON.stringify(person)));
